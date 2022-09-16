@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movielist/widgets/trending.dart';
 import 'package:tmdb_api/tmdb_api.dart';
 
 void main() {
@@ -61,6 +62,11 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Flutter Movie App'),),
+      body: ListView(
+        children: [
+          TrendingMovies(trending: trendingMovies)
+        ],
+      )
     );
   }
 }
